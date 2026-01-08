@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15                # official PostgreSQL image, tag 15
+    container_name: pg_city           # friendly name for the container
+    environment:
+      POSTGRES_PASSWORD: secret       # password for the default `postgres` user
+    ports:
+      - "5432:5432"                  # expose container's 5432 port on the host
+    volumes:
+      - "./data:/var/lib/postgresql/data"   # mount our local data folder into the container
+    restart: unless-stopped           # automatically restart if the host reboots
