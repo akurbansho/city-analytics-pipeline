@@ -1,0 +1,27 @@
+# -------------------------------------------------
+# Python / Jupyter artefacts
+# -------------------------------------------------
+__pycache__/                # compiled byte‑code caches
+.ipynb_checkpoints/         # Jupyter notebook autosave checkpoints
+*.pyc                       # stray compiled files
+*.pyo
+*.pyd
+
+# -------------------------------------------------
+# Virtual environments (conda / venv)
+# -------------------------------------------------
+env/
+venv/
+.venv/
+
+# -------------------------------------------------
+# Docker overrides (optional local tweaks)
+# -------------------------------------------------
+docker-compose.override.yml
+
+# -------------------------------------------------
+# Data files – keep them out of the repo unless you
+# deliberately want to version them.
+# -------------------------------------------------
+data/*.csv
+data/*.parquet
